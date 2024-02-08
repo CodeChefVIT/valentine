@@ -2,8 +2,8 @@
 
 body {
   font-family: "Rubik", sans-serif;
-  width: 100%;
-  height: 100vh;
+  /* width: 100%; */
+  /* height: 100vh; */
   -webkit-tap-highlight-color: transparent;
   transition: transform 0.3s ease-in-out;
 }
@@ -52,7 +52,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 95vh;
   width: 100%;
 }
 

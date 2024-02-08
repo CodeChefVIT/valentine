@@ -9,10 +9,10 @@ const phrases = [
 ];
 
 const gifs = [
-  "src\\assets\\gif1.gif",
-  "src\\assets\\gif2.gif",
-  "src\\assets\\gif3.gif",
-  "src\\assets\\gif4.gif"
+  "/assets/gif1.gif",
+  "/assets\\gif2.gif",
+  "/assets\\gif3.gif",
+  "/assets\\gif4.gif"
 ];
 
 function App() {
