@@ -10,10 +10,10 @@ const phrases = [
 ];
 
 const gifs = [
-  "src\\images\\gif1.gif",
-  "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXNvcDlzaXlubTg1ZmU3Zmc3N2Q4cXgwdXJ1cXR3enYwZ2FiejFuaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/K6WIhJ07gwGkIAQfwN/giphy.gif",
-  "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTI4ZXF4MmJjYWYxdWo0aGZudG5heWpibTdqNGplOXFxcm8zbHZvYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SHdwS47nztG2MHCOTH/giphy.gif",
-  "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnN1endwcG83cjdkeWhmamxkMnMwejNnZ3lod3V2ZnhhZzI4bTR5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUOwFZmWUC2QDHKu4M/giphy.gif",
+  "src\\assets\\gif1.gif",
+  "src\\assets\\gif2.gif",
+  "src\\assets\\gif3.gif",
+  "src\\assets\\gif4.gif"
 ];
 
 function App() {
@@ -25,12 +25,15 @@ function App() {
     setNoCount(noCount + 1);
     const yesBtn = document.getElementById("yesButton");
     const noBtn = document.getElementById("noButton");
-    noBtn.style.position = "absolute";
-    noBtn.style.transition = "top 0.3s ease-in-out, right 0.3s ease-in-out";
-    noBtn.style.top = `${Math.random() * 250}px`;
-    noBtn.style.right = `${Math.random() * 250}px`;
-    yesBtn.style.width = `${yesBtn.offsetWidth + 40}px`;
-    yesBtn.style.height = `${yesBtn.offsetHeight + 40}px`;
+    if(noBtn && yesBtn)
+    {
+      noBtn.style.position = "absolute";
+      noBtn.style.transition = "top 0.3s ease-in-out, right 0.3s ease-in-out";
+      noBtn.style.top = `${Math.random() * 375}px`;
+      noBtn.style.right = `${Math.random() * 375}px`;
+      yesBtn.style.width = `${yesBtn.offsetWidth + 40}px`;
+      yesBtn.style.height = `${yesBtn.offsetHeight + 40}px`;
+    }
   }
 
   function getNoGif() {
@@ -46,10 +49,7 @@ function App() {
       <div className="valentine">
         {yesPressed ? (
           <>
-            <img
-              src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDNwbTV5bG43NDdqdXM5dXd2MDFuOXVqYmtvNDk0djg2d291cW40YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KztT2c4u8mYYUiMKdJ/giphy.gif"
-              alt="yes"
-            />
+            <img src="src\\assets\\gifyes.gif" alt="yes"/>
             <div className="text">Yayyy!!!</div>
           </>
         ) : (
