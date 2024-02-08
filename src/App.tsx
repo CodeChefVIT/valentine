@@ -56,7 +56,7 @@ function App() {
       <div className="valentine">
         {yesPressed ? (
           <>
-            <img src="src\\assets\\gifyes.gif" alt="yes"/>
+            <img src="/assets\\gifyes.gif" alt="yes"/>
             <div className="text">Yayyy!!!</div>
           </>
         ) : (
