@@ -8,6 +8,12 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
+body.js-disabled {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.5; 
+}
+
 .text {
   font-size: 28px;
   margin: 10px;

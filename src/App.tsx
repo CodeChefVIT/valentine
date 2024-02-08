@@ -1,5 +1,4 @@
-import { useState } from "react";
-import "./App.css";
+import { useEffect, useState } from "react";
 
 const phrases = [
   "No",
@@ -19,7 +18,15 @@ const gifs = [
 function App() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
+  const [gifLoading, setGifLoading] = useState(true);
   const yesSize = noCount * 15 + 16;
+
+  useEffect(() =>{
+    if (!gifLoading) {
+      document.body.classList.remove("js-disabled");
+    }
+
+  })
 
   function handleNoClick() {
     setNoCount(noCount + 1);
@@ -54,7 +61,7 @@ function App() {
           </>
         ) : (
           <>
-            <img src={getNoGif()} alt="no" />
+            <img src={getNoGif()} alt="no" onLoad={() => setGifLoading(false)}/>
             <div className="text">Will you be my valentine?</div>
             <div>
               <button
